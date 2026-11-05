@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-jimothy-gold: #f59e0b;
+  --color-jimothy-orange: #ff6b00;
+  --color-jimothy-amber: #fbbf24;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #080b11;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Subtle glow effects */
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.45);
+}
+
+.glow-orange {
+  box-shadow: 0 0 40px -5px rgba(255, 107, 0, 0.5);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.35);
+}
+
+/* Gentle float animation */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4s ease-in-out infinite;
+}
