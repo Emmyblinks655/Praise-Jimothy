@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import CountdownTimer from './components/CountdownTimer';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -64,6 +65,9 @@ export default function App() {
         onClose={handleCloseBuy}
         initialWallet={selectedWalletForModal}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
